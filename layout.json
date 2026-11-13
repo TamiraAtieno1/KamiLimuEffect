@@ -1,0 +1,592 @@
+{
+ "spreads": [
+  {
+   "label": "Chapter one",
+   "title": "The first hello",
+   "cards": {
+    "L": [
+     {
+      "left": 56.3,
+      "top": 227.1,
+      "w": 250,
+      "h": 185,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 335.8,
+      "top": 216.3,
+      "w": 220,
+      "h": 165,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 144.5,
+      "top": 495.6,
+      "w": 300,
+      "h": 200,
+      "rot": -2,
+      "label": "add your photo",
+      "name": "name here"
+     }
+    ],
+    "R": [
+     {
+      "left": 86.5,
+      "top": 77.1,
+      "w": 250,
+      "h": 190,
+      "rot": -3,
+      "label": "add your photo",
+      "name": "name here"
+     },
+     {
+      "left": 387.9,
+      "top": 98.0,
+      "w": 210,
+      "h": 170,
+      "rot": 4,
+      "label": "add your photo",
+      "name": "name here"
+     }
+    ]
+   },
+   "text": [
+    "Where it all began: the nerves,",
+    "the first faces, the first",
+    "sense that I belonged here."
+   ],
+   "text_y": 480,
+   "lesson": true,
+   "lesson_y": 630
+  },
+  {
+   "label": "Chapter two",
+   "title": "The path I chose",
+   "cards": {
+    "L": [
+     {
+      "left": 55.9,
+      "top": 216.6,
+      "w": 230,
+      "h": 170,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 325.9,
+      "top": 206.6,
+      "w": 230,
+      "h": 170,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 74.0,
+      "top": 484.4,
+      "w": 230,
+      "h": 170,
+      "rot": -2,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 345.8,
+      "top": 501.3,
+      "w": 220,
+      "h": 165,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     }
+    ],
+    "R": [
+     {
+      "left": 145.0,
+      "top": 76.2,
+      "w": 330,
+      "h": 230,
+      "rot": -2,
+      "label": "add your photo",
+      "name": "name here"
+     }
+    ]
+   },
+   "text": [
+    "The Software Engineering track:",
+    "the projects I built, the bugs",
+    "I fought, the skills I grew."
+   ],
+   "text_y": 480,
+   "lesson": true,
+   "lesson_y": 630
+  },
+  {
+   "label": "Chapter three",
+   "title": "Around the same fire",
+   "cards": {
+    "L": [
+     {
+      "left": 56.3,
+      "top": 227.1,
+      "w": 250,
+      "h": 185,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 335.8,
+      "top": 216.3,
+      "w": 220,
+      "h": 165,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 144.5,
+      "top": 495.6,
+      "w": 300,
+      "h": 200,
+      "rot": -2,
+      "label": "add your photo",
+      "name": "name here"
+     }
+    ],
+    "R": [
+     {
+      "left": 86.5,
+      "top": 77.1,
+      "w": 250,
+      "h": 190,
+      "rot": -3,
+      "label": "add your photo",
+      "name": "name here"
+     },
+     {
+      "left": 387.9,
+      "top": 98.0,
+      "w": 210,
+      "h": 170,
+      "rot": 4,
+      "label": "add your photo",
+      "name": "name here"
+     }
+    ]
+   },
+   "text": [
+    "My peer mentorship group,",
+    "the circle where we showed up",
+    "for each other, week after week."
+   ],
+   "text_y": 480,
+   "lesson": true,
+   "lesson_y": 630
+  },
+  {
+   "label": "Chapter four",
+   "title": "The hands that held mine",
+   "cards": {
+    "L": [
+     {
+      "left": 55.7,
+      "top": 225.8,
+      "w": 200,
+      "h": 160,
+      "rot": 3,
+      "label": "mentor",
+      "name": "mentor's name"
+     },
+     {
+      "left": 325.7,
+      "top": 215.8,
+      "w": 200,
+      "h": 160,
+      "rot": -3,
+      "label": "mentor",
+      "name": "mentor's name"
+     },
+     {
+      "left": 73.8,
+      "top": 493.9,
+      "w": 200,
+      "h": 160,
+      "rot": -2,
+      "label": "mentor",
+      "name": "mentor's name"
+     },
+     {
+      "left": 333.8,
+      "top": 503.9,
+      "w": 200,
+      "h": 160,
+      "rot": 2,
+      "label": "mentor",
+      "name": "mentor's name"
+     }
+    ],
+    "R": [
+     {
+      "left": 73.3,
+      "top": 73.2,
+      "w": 160,
+      "h": 130,
+      "rot": -2,
+      "label": "mentor",
+      "name": "mentor's name"
+     },
+     {
+      "left": 274.9,
+      "top": 64.8,
+      "w": 160,
+      "h": 130,
+      "rot": 3,
+      "label": "mentor",
+      "name": "mentor's name"
+     },
+     {
+      "left": 473.3,
+      "top": 77.9,
+      "w": 140,
+      "h": 130,
+      "rot": -2,
+      "label": "mentor",
+      "name": "mentor's name"
+     }
+    ]
+   },
+   "text": [
+    "To my mentors, a note to each:",
+    "Dear ________,",
+    "thank you for ____________."
+   ],
+   "text_y": 420,
+   "lesson": true,
+   "lesson_y": 570
+  },
+  {
+   "label": "Chapter five",
+   "title": "Fellow travellers",
+   "cards": {
+    "L": [
+     {
+      "left": 55.9,
+      "top": 216.6,
+      "w": 230,
+      "h": 170,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 325.9,
+      "top": 206.6,
+      "w": 230,
+      "h": 170,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 74.0,
+      "top": 484.4,
+      "w": 230,
+      "h": 170,
+      "rot": -2,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 345.8,
+      "top": 501.3,
+      "w": 220,
+      "h": 165,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     }
+    ],
+    "R": [
+     {
+      "left": 86.5,
+      "top": 77.1,
+      "w": 250,
+      "h": 190,
+      "rot": -3,
+      "label": "add your photo",
+      "name": "name here"
+     },
+     {
+      "left": 387.9,
+      "top": 98.0,
+      "w": 210,
+      "h": 170,
+      "rot": 4,
+      "label": "add your photo",
+      "name": "name here"
+     }
+    ]
+   },
+   "text": [
+    "The peer mentors I had",
+    "the pleasure of meeting,",
+    "and what each one showed me."
+   ],
+   "text_y": 480,
+   "lesson": true,
+   "lesson_y": 630
+  },
+  {
+   "label": "Chapter six",
+   "title": "Allies in the arena",
+   "cards": {
+    "L": [
+     {
+      "left": 55.9,
+      "top": 216.6,
+      "w": 230,
+      "h": 170,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 325.9,
+      "top": 206.6,
+      "w": 230,
+      "h": 170,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 74.0,
+      "top": 484.4,
+      "w": 230,
+      "h": 170,
+      "rot": -2,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 345.8,
+      "top": 501.3,
+      "w": 220,
+      "h": 165,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     }
+    ],
+    "R": [
+     {
+      "left": 64.9,
+      "top": 64.8,
+      "w": 160,
+      "h": 130,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 258.3,
+      "top": 53.2,
+      "w": 160,
+      "h": 130,
+      "rot": 2,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 455.0,
+      "top": 69.5,
+      "w": 150,
+      "h": 130,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 113.5,
+      "top": 273.9,
+      "w": 200,
+      "h": 140,
+      "rot": 2,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 365.2,
+      "top": 285.8,
+      "w": 200,
+      "h": 140,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     }
+    ]
+   },
+   "text": [
+    "The competitions, and the people",
+    "who turned into friends along the way."
+   ],
+   "text_y": 510,
+   "lesson": true,
+   "lesson_y": 600
+  },
+  {
+   "label": "Chapter seven",
+   "title": "Friends found along the way",
+   "cards": {
+    "L": [
+     {
+      "left": 57.8,
+      "top": 258.7,
+      "w": 230,
+      "h": 170,
+      "rot": 4,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 325.9,
+      "top": 246.6,
+      "w": 230,
+      "h": 170,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 84.0,
+      "top": 504.4,
+      "w": 230,
+      "h": 170,
+      "rot": -2,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 355.7,
+      "top": 526.1,
+      "w": 210,
+      "h": 160,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     }
+    ],
+    "R": [
+     {
+      "left": 66.2,
+      "top": 66.8,
+      "w": 240,
+      "h": 180,
+      "rot": -3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 356.2,
+      "top": 76.8,
+      "w": 240,
+      "h": 180,
+      "rot": 3,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 84.0,
+      "top": 344.4,
+      "w": 230,
+      "h": 170,
+      "rot": 2,
+      "label": "photo",
+      "name": "name here"
+     },
+     {
+      "left": 367.8,
+      "top": 368.7,
+      "w": 230,
+      "h": 170,
+      "rot": -4,
+      "label": "photo",
+      "name": "name here"
+     }
+    ]
+   },
+   "text": [
+    "~ the ones who stayed ~"
+   ],
+   "text_y": 680,
+   "lesson": false
+  },
+  {
+   "label": "Epilogue",
+   "title": "The girl the pages made",
+   "cards": {
+    "L": [
+     {
+      "left": 56.5,
+      "top": 226.6,
+      "w": 230,
+      "h": 190,
+      "rot": 3,
+      "label": "me, at the start",
+      "name": "name here"
+     },
+     {
+      "left": 326.5,
+      "top": 236.6,
+      "w": 230,
+      "h": 190,
+      "rot": -3,
+      "label": "me, now",
+      "name": "name here"
+     },
+     {
+      "left": 134.5,
+      "top": 506.0,
+      "w": 320,
+      "h": 200,
+      "rot": -2,
+      "label": "a moment I'm proud of",
+      "name": "name here"
+     }
+    ],
+    "R": [
+     {
+      "left": 125.7,
+      "top": 67.0,
+      "w": 380,
+      "h": 270,
+      "rot": 2,
+      "label": "a photo of you now",
+      "name": "name here"
+     }
+    ]
+   },
+   "text": [
+    "What KamiLimu means to me:",
+    "the lessons I carry forward,",
+    "and where I am headed next.",
+    "",
+    "~ to be continued ~"
+   ],
+   "text_y": 500,
+   "lesson": false
+  }
+ ],
+ "coverWindow": {
+  "x": 230,
+  "y": 500,
+  "w": 300,
+  "h": 290
+ }
+}
