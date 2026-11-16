@@ -193,6 +193,12 @@ body::after {
 }
 #toast.show { opacity: 1; }
 body.present #tools, body.present .rm { display: none !important; }
+body.viewer #tools, body.viewer .rm, body.viewer .swap { display: none !important; }
+body.viewer .photo, body.viewer .cover-photo, body.viewer .name, body.viewer .text, body.viewer .lesson { cursor: default; }
+body.viewer .photo:not(.has) { border-color: rgba(58,34,14,.22); }
+body.viewer .photo:not(.has) .ph, body.viewer .cover-photo:not(.has) .dash { color: transparent; }
+body.viewer .cover-photo:not(.has) .dash { border-color: rgba(120,80,38,.35); }
+body.viewer .card:hover { box-shadow: 6px 8px 16px rgba(40,20,5,.38); }
 body.present [contenteditable]:empty::before { content: ""; }
 body.present .photo:not(.has) .ph, body.present .cover-photo:not(.has) .dash { opacity: .35; }
 </style>
@@ -213,6 +219,10 @@ body.present .photo:not(.has) .ph, body.present .cover-photo:not(.has) .dash { o
 
 <script>
 const LAYOUT = __LAYOUT__;
+/* Visitors get a read-only book showing only what's published in book-save.json.
+   Add ?edit to the link (or open the file straight from your computer) to edit. */
+const EDIT = new URLSearchParams(location.search).has("edit") || location.protocol === "file:";
+if (!EDIT) document.body.classList.add("viewer", "present");
 const IMG = __PAGES__;
 
 /* ---------- storage: text in localStorage, photos in IndexedDB ---------- */
@@ -287,8 +297,11 @@ function shrink(file) {
 /* ---------- building the book ---------- */
 const el = (tag, cls, attrs = {}) => { const e = document.createElement(tag); if (cls) e.className = cls; Object.assign(e, attrs); return e; };
 const photoSlots = {};
+const textNodes = {};
 
 function editable(node, key, placeholder, fallback) {
+  textNodes[key] = node;
+  if (!EDIT) { node.textContent = fallback || ""; return node; }
   node.contentEditable = "plaintext-only";
   if (node.contentEditable !== "plaintext-only") node.contentEditable = "true";
   node.dataset.ph = placeholder || "";
@@ -307,6 +320,7 @@ function wirePhoto(holder, key, hasClassTarget, rmBtn) {
     else { img.removeAttribute("src"); img.hidden = true; hasClassTarget.classList.remove("has"); if (rmBtn) rmBtn.classList.remove("show"); }
   };
   photoSlots[key] = show;
+  if (!EDIT) return;
   const accept = async file => {
     if (!file || !file.type.startsWith("image/")) return;
     try { const data = await shrink(file); show(data); await store.setPhoto(key, data); }
@@ -321,7 +335,7 @@ function wirePhoto(holder, key, hasClassTarget, rmBtn) {
   holder.addEventListener("dragover", e => { e.preventDefault(); hasClassTarget.classList.add("drag"); });
   holder.addEventListener("dragleave", () => hasClassTarget.classList.remove("drag"));
   holder.addEventListener("drop", e => { e.preventDefault(); hasClassTarget.classList.remove("drag"); accept(e.dataTransfer.files[0]); });
-  if (rmBtn) rmBtn.addEventListener("click", e => { e.stopPropagation(); show(null); store.delPhoto(key); });
+  if (rmBtn) rmBtn.addEventListener("click", e => { e.stopPropagation(); show(null); store.setPhoto(key, ""); });
 }
 
 function makeCard(c, key) {
@@ -437,7 +451,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); go(pos - 1); }
   if (e.key === "Home") go(0);
   if (e.key === "End") go(N);
-  if (e.key.toLowerCase() === "p") togglePresent();
+  if (EDIT && e.key.toLowerCase() === "p") togglePresent();
 });
 let tx0 = null;
 document.addEventListener("touchstart", e => { if (!e.target.isContentEditable) tx0 = e.touches[0].clientX; }, { passive: true });
@@ -486,9 +500,22 @@ document.getElementById("load").addEventListener("click", () => {
   f.click();
 });
 
+/* Photos and words saved in the browser win; anything missing is filled from
+   book-save.json sitting next to this page (a "Save a copy" file committed to the repo). */
 store.open().then(async () => {
-  const all = await store.allPhotos();
-  for (const [k, v] of Object.entries(all)) if (photoSlots[k]) photoSlots[k](v);
+  let shared = null;
+  try {
+    const r = await fetch("book-save.json", { cache: "no-cache" });
+    if (r.ok) shared = await r.json();
+  } catch (e) {}
+  const local = EDIT ? await store.allPhotos() : {};
+  const photos = Object.assign({}, (shared && shared.photos) || {}, local);
+  for (const [k, v] of Object.entries(photos)) if (photoSlots[k]) photoSlots[k](v || null);
+  if (shared && shared.text) {
+    for (const [k, v] of Object.entries(shared.text)) {
+      if ((!EDIT || store.getText(k) === null) && textNodes[k]) textNodes[k].textContent = v;
+    }
+  }
 });
 layout();
 </script>
